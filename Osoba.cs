@@ -13,6 +13,8 @@ namespace Test
         protected DateTime _datumRodjenja { get; set; }
         protected string _maticniBroj { get; set; }
 
+        public Osoba()
+        {
             Console.Write("Unesite ime: ");
             _ime = Console.ReadLine();
             Console.Write("Unesite prezime: ");
@@ -21,6 +23,7 @@ namespace Test
             _datumRodjenja = DateTime.Parse(Console.ReadLine());
             Console.Write("Unesite maticni broj: ");
             _maticniBroj = Console.ReadLine();
+        }
 
     }
 }

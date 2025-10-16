@@ -8,11 +8,14 @@ namespace Test
 {
     public class Utakmica
     {
-        protected DateTime _datum { get; set; }
-        protected string _protivnik { get; set; }
-        protected int _postignutiGolovi { get; set; }
-        protected int _primljeniGolovi { get; set; }
-        Console.Write("Unesite datum utakmice (dd.MM.yyyy): ");
+         DateTime _datum { get; set; }
+         string _protivnik { get; set; }
+         int _postignutiGolovi { get; set; }
+         int _primljeniGolovi { get; set; }
+
+        public Utakmica()
+        {
+            Console.Write("Unesite datum utakmice (dd.MM.yyyy): ");
             _datum = DateTime.Parse(Console.ReadLine());
             Console.Write("Unesite naziv protivnika: ");
             _protivnik = Console.ReadLine();
@@ -20,5 +23,6 @@ namespace Test
             _postignutiGolovi = int.Parse(Console.ReadLine());
             Console.Write("Unesite broj primljenih golova: ");
             _primljeniGolovi = int.Parse(Console.ReadLine());
+        }
     }
 }

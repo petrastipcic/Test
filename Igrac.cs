@@ -8,14 +8,16 @@ namespace Test
 {
     public class Igrac:Osoba
     {
-        protected string _pozicija { get; set; }
-        protected int _brojDresa { get; set; }
-        protected int _brojPostignutihGolova { get; set; }
-        protected List<string> _listaUtakmica { get; set; }
-        protected int _br { get; set; }
-        protected string _utakmica { get; set; }
+        string _pozicija { get; set; }
+         int _brojDresa { get; set; }
+         int _brojPostignutihGolova { get; set; }
+         List<string> _listaUtakmica { get; set; }
+         int _br { get; set; }
+         string _utakmica { get; set; }
 
-        Console.Write("Unesite poziciju: ");
+        public Igrac()
+        {
+            Console.Write("Unesite poziciju: ");
             _pozicija = Console.ReadLine();
             Console.Write("Unesite broj dresa: ");
             _brojDresa = int.Parse(Console.ReadLine());
@@ -25,11 +27,12 @@ namespace Test
             Console.Write("Unesite broj utakmica: ");
             _br = int.Parse(Console.ReadLine());
 
-       for (int i = 0; i < _br; i++)
+            for (int i = 0; i < _br; i++)
             {
                 Console.Write("Unesite naziv {i + 1}. utakmice: ");
                 _utakmica = Console.ReadLine();
                 _listaUtakmica.Add(utakmica);
             }
+        }
     }
 }
